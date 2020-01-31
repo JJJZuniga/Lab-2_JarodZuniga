@@ -138,8 +138,10 @@ public class Lab2_JarodZuniga {
                     System.out.println("Que personaje desea modificar");
                     int mod=sc.nextInt();
                     System.out.println("");
-                    System.out.println(mod-1);
+                    System.out.println(personajes.get(mod-1));
                    System.out.println("Que dese modificar 1.tipo, 2.nombre,3.raza,4.esta,5.peso,6.edad,7.des,8.nacionalidad");
+                   int modi=sc.nextInt();
+                   
                     break;
                 case 3:
                      for (Personajes o : personajes) {
@@ -149,12 +151,13 @@ public class Lab2_JarodZuniga {
                 case 4:
                      int s=0;
                     for (Personajes o : personajes) {
-                        System.out.println((s+1)+""+o);
+                        System.out.println((s+1)+". "+o);
                         s++;
                     }
                     System.out.println("Ingrese que personaje desea eliminar");
                     int el=sc.nextInt();
-                    personajes.remove(el);
+                    personajes.remove(el-1);
+                    System.out.println("Persoanje eliminado exitosamente");
                     
                     break;
                 case 5:
