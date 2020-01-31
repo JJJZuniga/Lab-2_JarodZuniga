@@ -13,8 +13,12 @@ private double peso;
 private int años;
 private String descripcion;
 private String nacionalidad;
+private int hp;
+private int cs;
+private int ac;
+private int dg;
 
-    public Personajes(String categoria, String nombre, String raza, double estatura, double peso, int años, String descripcion, String nacionalidad) {
+    public Personajes(String categoria, String nombre, String raza, double estatura, double peso, int años, String descripcion, String nacionalidad, int hp, int cs, int ac, int dg) {
         this.categoria = categoria;
         this.nombre = nombre;
         this.raza = raza;
@@ -23,8 +27,11 @@ private String nacionalidad;
         this.años = años;
         this.descripcion = descripcion;
         this.nacionalidad = nacionalidad;
+        this.hp = hp;
+        this.cs = cs;
+        this.ac = ac;
+        this.dg = dg;
     }
-
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
@@ -88,6 +95,8 @@ private String nacionalidad;
     public String getNacionalidad() {
         return nacionalidad;
     }
-
-    
+    @Override
+    public String toString(){
+        return "Personale: "+categoria+" nombre: "+nombre+" raza: "+raza+" Estatura: "+ estatura+" Peso:"+ peso+" Edad: "+años+" Descripcion: "+ descripcion+" Nacionalidad: "+nacionalidad+" Hp: "+hp+" Cs: "+cs+" AC: "+ac+" DG: "+dg;
+    }
 }
