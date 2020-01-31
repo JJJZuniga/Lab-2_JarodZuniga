@@ -97,6 +97,6 @@ private int dg;
     }
     @Override
     public String toString(){
-        return "Personale: "+categoria+" nombre: "+nombre+" raza: "+raza+" Estatura: "+ estatura+" Peso:"+ peso+" Edad: "+años+" Descripcion: "+ descripcion+" Nacionalidad: "+nacionalidad+" Hp: "+hp+" Cs: "+cs+" AC: "+ac+" DG: "+dg;
+        return " Personaje: "+categoria+" ,nombre: "+nombre+" ,raza: "+raza+" ,Estatura: "+ estatura+" ,Peso:"+ peso+" ,Edad: "+años+" ,Descripcion: "+ descripcion+" ,Nacionalidad: "+nacionalidad+" ,Hp: "+hp+" ,Cs: "+cs+" ,AC: "+ac+" ,DG: "+dg;
     }
 }
