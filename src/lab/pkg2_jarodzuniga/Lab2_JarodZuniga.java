@@ -17,7 +17,9 @@ public class Lab2_JarodZuniga {
         personajes.add(new Personajes( "Picaro", "El bryan","Elfo",1.59,130,180,"Dame el celular","Crateria",65,80,50,19));
         personajes.add(new Personajes( "Barbaro", "Maximus","Humano",1.79,180,80,"Agil","Zebes",60,97,40,12));
         personajes.add(new Personajes( "MAgo", "Le fuegores","Mediano",1.90,130,10000,"Sabiduria maxima","Brinstar",60,97,40,19));
+        int i=4;
         while (opcion!=6){
+            System.out.println("");
         System.out.println("Bienvenido a juego codest");
         System.out.println("|---------------------*MENU*----------------------|");
         System.out.println("|-------------------------------------------------|");
@@ -123,23 +125,40 @@ public class Lab2_JarodZuniga {
                             System.out.println("Nacionalidad no valida");
                     }
                     personajes.add(new Personajes( tipo, nombre,raza,esta,peso,edad,des,nacionalidad,hp,cs,ac,dg));
-                    for (int i=4; i < personajes.size(); i++) {
+
                         System.out.println(personajes.get(i));
-                    }
+                        i++;
                     break;
                     
                 case 2:
+                    for (Personajes o : personajes) {
+                        System.out.println(o);
+                    }
+                    System.out.println("");
+                    System.out.println("Que personaje desea modificar");
+                    int mod=sc.nextInt();
+                    System.out.println("");
+                    System.out.println(mod-1);
+                   System.out.println("Que dese modificar 1.tipo, 2.nombre,3.raza,4.esta,5.peso,6.edad,7.des,8.nacionalidad");
                     break;
                 case 3:
-                    for (Personajes o : personajes) {
+                     for (Personajes o : personajes) {
                         System.out.println(o);
                     }
                     break;
                 case 4:
+                     int s=0;
+                    for (Personajes o : personajes) {
+                        System.out.println((s+1)+""+o);
+                        s++;
+                    }
+                    System.out.println("Ingrese que personaje desea eliminar");
+                    int el=sc.nextInt();
+                    personajes.remove(el);
                     
                     break;
                 case 5:
-                    
+                   
                     break;
                 case 6:
                     System.out.println("Gracias por usar el programa");
